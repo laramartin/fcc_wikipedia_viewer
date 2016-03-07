@@ -199,6 +199,9 @@ $(document).ready(function() {
   var searchResults = data.query.search.length;
   console.log("search results length is: " + searchResults);
 
+  var searchInput = document.getElementById("searchForm").value;
+  console.log("text written in search form: " + searchInput);
+
   var html = "";
   for (var i = 0; i < data.query.search.length; i++){
 
