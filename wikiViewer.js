@@ -9,14 +9,14 @@ $(document).ready(function() {
     search(searchInput);
   });
 
+  $( "#randomButton" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
+
   //displayData(exampleData);
 });
 
 var searchInput = "";
-
-console.log("this is the wikiViewer.js")
-var urlTest = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?"
-console.log("this is the url: " + url);
 
 // data format "json"
 var exampleData = {
