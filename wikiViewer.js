@@ -212,19 +212,19 @@ var exampleData = {
 
 function getEntries(url){
   $.ajax({
-        type: "GET",
-        url: url,
-        contentType: "application/json; charset=utf-8",
-        async: true,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            console.log(data);
-            displayData(data);
-        },
-        error: function (errorMessage) {
-          console.log(errorMessage);
-        }
-    });
+    type: "GET",
+    url: url,
+    contentType: "application/json; charset=utf-8",
+    async: true,
+    dataType: "json",
+    success: function (data, textStatus, jqXHR) {
+      console.log(data);
+      displayData(data);
+    },
+    error: function (errorMessage) {
+      console.log(errorMessage);
+    }
+  });
 
 };
 
@@ -232,7 +232,7 @@ function search(input){
   // crear string de la busqueda
   var str = searchInput.split(' ').join('+');
   var urlTest = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=" +
-    str + "&callback=?";
+  str + "&callback=?";
 
   console.log("str: " + str);
   console.log("url creada: " + urlTest);
@@ -262,4 +262,14 @@ function displayData(data){
   };
 
   $(".resultTitle").html(html);
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74834254-1', 'auto');
+  ga('send', 'pageview');
+
 };
