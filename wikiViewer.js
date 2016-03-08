@@ -255,7 +255,7 @@ function displayData(data){
 
 
     html += "<div class='resultEntry'><p>" + "value of i: " + i +
-    "<br>'title': " + title +
+    "<br><b>'title': " + title + "</b>" +
     "<br>'snippet': " + snippet +
     "</p></div>";
 

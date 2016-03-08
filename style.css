@@ -1,1 +1,27 @@
 /*wikipedia viewer style*/
+body{
+  background-color: #548687 !important;
+}
+.jumbotron {
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  padding-top: 10px !important;
+  border: solid;
+  border-color: #56445D;
+  background-color: #8FBC94 !important;
+
+}
+
+
+#searchValue {
+  margin-bottom: 20px;
+}
+
+.resultEntry {
+  background-color: rgba(255,255,255,0.25);
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 10px;
+  border-left: solid;
+  border-left-color: #C5E99B;
+  border-left-width: thick;
+}
