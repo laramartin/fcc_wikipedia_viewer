@@ -3,14 +3,16 @@ $(document).ready(function() {
   $( "#searchForm" ).submit(function( event ) {
     //this prevents the page to be refreshed
     event.preventDefault();
-    var searchInput = document.getElementById("searchValue").value;
+    searchInput = document.getElementById("searchValue").value;
     console.log("text written in search form: " + searchInput);
+
     search(searchInput);
   });
 
   //displayData(exampleData);
 });
 
+var searchInput = "";
 
 console.log("this is the wikiViewer.js")
 var urlTest = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=Albert+Einstein&callback=?"
@@ -228,23 +230,16 @@ function getEntries(url){
 
 function search(input){
   // crear string de la busqueda
+  var str = searchInput.split(' ').join('+');
+  var urlTest = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=" +
+    str + "&callback=?";
+
+  console.log("str: " + str);
+  console.log("url creada: " + urlTest);
 
   // coger json
   getEntries(urlTest);
 };
-
-
-
-
-
-
-
-// // need permissions to access to JSON, neeed to check documentation
-// // https://www.mediawiki.org/wiki/API:Main_page
-
-//
-// getEntries(url);
-
 
 
 function displayData(data){
