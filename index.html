@@ -10,24 +10,41 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<!-- google font -->
-	<!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!-- CSS -->
 	<link href="style.css" media="all" rel="stylesheet" type="text/css"/>
 	<!-- js file  -->
 	<script src="wikiViewer.js"></script>
 </head>
 <body>
+	<div id="wrap">
+		<div id="main" class="container">
+			<div class="jumbotron">
+				<h3>Wikipedia Viewer</h3>
 
-	<div class="jumbotron">
-		<h3>Wikipedia Viewer</h3>
-		<form id="searchForm" action="">
-	    <label for="name">Enter your search:</label>
-			<br>
-	    <input type="text" name="name" id="searchValue">
-		</form>
-		<button type="button" id="randomButton">Get random entry</button>
+				<div class="row">
+					<div class="col-xs-6">
+						<form id="searchForm" action="">
+							<label for="name">Enter your search:</label>
+							<br><br>
+							<input type="text" name="name" id="searchValue">
+						</form>
+					</div>
+					<div class="col-xs-6">
+						<p><b>Navigate to a random entry:</b></p>
+						<!-- <button type="button" id="randomButton">Get random entry</button> -->
+						<i class="fa fa-4x fa-space-shuttle" id="randomButton"></i>
+					</div>
+				</div>
+			</div>
+			<div class="container resultTitle"></div>
+		</div>
 	</div>
-  <div class="container resultTitle"></div>
+
+	<footer class="footer container-fluid">
+		<p>Written and coded by <a href="http://www.freecodecamp.com/laramartin" target="_blank">Lara Martin
+		</a> in the &hearts; of Berlin.</p>
+	</footer>
 </body>
 </html>

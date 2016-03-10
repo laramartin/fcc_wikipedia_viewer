@@ -1,15 +1,17 @@
 /*wikipedia viewer style*/
-/*body{
-  background-color: #548687 !important;
-}*/
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
 .jumbotron {
   text-align: center;
   margin: 20px 20px 20px 20px;
   padding-top: 10px !important;
-  border: solid;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: thick;
   border-color: #8FBC94;
-  /*background-color: #8FBC94 !important;*/
-
+  background-color: transparent !important;
 }
 
 #searchValue {
@@ -25,16 +27,34 @@
   border-left-width: 8px;
 }
 
+p{
+  font-size: small !important;
+}
+
+h3 {
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
 a {
   color: inherit !important;
   text-decoration: inherit !important; /* no underline */
 }
 
-/*a:hover {
-    color: none !important;
-}*/
+html, body {
+  height: 98%;
+}
 
-/* selected link */
-/*a:active {
-    color: none;
-}*/
+#wrap {
+  min-height: 98%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
