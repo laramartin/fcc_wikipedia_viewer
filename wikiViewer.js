@@ -38,47 +38,29 @@ function getEntries(url){
 };
 
 function search(input){
-  // crear string de la busqueda
   var str = searchInput.split(' ').join('+');
   var urlTest = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=" +
   str + "&callback=?";
-
-  console.log("str: " + str);
-  console.log("url creada: " + urlTest);
-
-  // coger json
   getEntries(urlTest);
 };
 
-
 function displayData(data){
   var searchResults = data.query.search.length;
-  console.log("search results length is: " + searchResults);
-
-
   var html = "";
-  for (var i = 0; i < data.query.search.length; i++){
 
+  for (var i = 0; i < data.query.search.length; i++){
     var title = data.query.search[i].title;
     var snippet = data.query.search[i].snippet;
     var titleStr = title.split(' ').join('_');
     var entryUrl = "https://en.wikipedia.org/wiki/" + titleStr;
-
-    console.log("title: " + title);
-    console.log("title: " + titleStr);
-    console.log("entryurl: " + entryUrl);
-
-
     html += "<a href='" + entryUrl + "' target='_blank'>"
-    + "<div class='resultEntry'> <p>" +
-    "<br><b>" + title + "</b>" +
-    "<br>" + snippet +
-    "</p></div></a>";
-
+      + "<div class='resultEntry'> <p>" +
+      "<br><b>" + title + "</b>" +
+      "<br>" + snippet +
+      "</p></div></a>";
   };
 
   $(".resultTitle").html(html);
-
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
