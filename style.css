@@ -26,15 +26,15 @@
 }
 
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit !important;
+  text-decoration: inherit !important; /* no underline */
 }
 
-a:hover {
+/*a:hover {
     color: none !important;
-}
+}*/
 
 /* selected link */
-a:active {
+/*a:active {
     color: none;
-}
+}*/

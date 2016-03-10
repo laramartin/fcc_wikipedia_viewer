@@ -164,9 +164,10 @@ function displayData(data){
     console.log("entryurl: " + entryUrl);
 
 
-    html += "<a href='www.google.com'><div class='resultEntry'> <p>" + "value of i: " + i +
-    "<br><b>'title': " + title + "</b>" +
-    "<br>'snippet': " + snippet +
+    html += "<a href='" + entryUrl + "' target='_blank'>"
+    + "<div class='resultEntry'> <p>" +
+    "<br><b>" + title + "</b>" +
+    "<br>" + snippet +
     "</p></div></a>";
 
   };
